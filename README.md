@@ -25,3 +25,5 @@ CREATE TABLE IF NOT EXISTS `users` (
 ## Usage
 
 au chargement de la page le script s'exécute automatiquement et récupère la liste des utilisateurs puis les rempli dans la table users locale
+
+pour l'ajout d'un utilisateur, l'envoi vers l'API se fait bien mais l'API n'offre pas de verification pour s'assurer du bon fonctionnement
