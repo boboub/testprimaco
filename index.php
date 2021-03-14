@@ -17,8 +17,12 @@
                 <div class="col-md-6">
                     <h3 class="panel-title">List of users</h3>
                 </div>
+                <div class="col-md-6" align="right">
+                    <input type="button" class="btn btn-success btn-xs" @click="addUser" value="Add user" />
+                </div>
             </div>
         </div>
+
         <div class="panel-body">
             <div class="table-responsive">
                 <table class="table table-bordered table-striped">
@@ -56,6 +60,12 @@
                     action:'getUsers'
                 }).then(function(response){
                     myuser.allData = response.data;
+                });
+            },
+            addUser:function(){
+                axios.post('script.php', {
+                    action:'addUser'
+                }).then(function(response){
                 });
             },
         },
